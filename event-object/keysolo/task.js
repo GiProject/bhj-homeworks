@@ -17,6 +17,14 @@ class Game {
   }
 
   registerEvents() {
+    document.addEventListener('keyup', (e) => {
+      if (e.key === 'Shift') return true;
+      if (e.key.toLocaleLowerCase() === this.currentSymbol.textContent) {
+        this.success();
+      } else {
+        this.fail();
+      }
+    });
     /*
       TODO:
       Написать обработчик события, который откликается
