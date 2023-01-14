@@ -10,12 +10,12 @@ document.querySelector('.slider__arrow.slider__arrow_next').addEventListener('cl
 
 function nextSlide()
 {
-    slideMoveTo(++currentSlide > slideCount - 1 ? 1 : currentSlide);
+    slideMoveTo(++currentSlide > slideCount - 1 ? 0 : currentSlide);
 }
 
 function previosSlide()
 {
-    slideMoveTo(--currentSlide < 1 ? slideCount - 1 : currentSlide);
+    slideMoveTo(--currentSlide < 0 ? slideCount - 1 : currentSlide);
 }
 
 function slideMoveTo(slideIndex)
