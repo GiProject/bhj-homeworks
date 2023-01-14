@@ -6,11 +6,11 @@ let cookieStyle = {
     height: cookie.height
 }
 cookie.onclick  = () => {
-    cookie.width = cookieStyle.width + 5;
-    cookie.height = cookieStyle.height + 5;
+    cookie.width = cookieStyle.width + 5 + 'px';
+    cookie.height = cookieStyle.height + 5 + 'px';
     clickCounterElement.innerText = ++clickCount;
     setTimeout(() => {
-        cookie.width = cookieStyle.width;
-        cookie.height = cookieStyle.height;
+        cookie.width = cookieStyle.width + 'px';
+        cookie.height = cookieStyle.height + 'px';
     }, 50);
 }
